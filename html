@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sapo</title>
+    <link rel="stylesheet" href="body 2.css">
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>¿Me concedes el honor de ser tu novio?</h1>
+        <div class="buttons">
+            <button id="yesButton" class="button">Sí</button>
+            <button id="noButton" class="button">No</button>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const yesButton = document.getElementById('yesButton');
+    const noButton = document.getElementById('noButton');
+    const buttonsContainer = document.querySelector('.buttons');
+    let swapped = false; 
+    yesButton.addEventListener('click', () => {
+        window.location.href = 'untitled-3.html';
+    });
+    noButton.addEventListener('click', () => {
+        if (swapped) {
+            buttonsContainer.style.flexDirection = 'row';
+        } else {
+            buttonsContainer.style.flexDirection = 'row-reverse';
+        }
+        swapped = !swapped; 
+    });
+});
+    </script>
+</body>
+</html>
